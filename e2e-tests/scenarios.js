@@ -7,35 +7,35 @@ describe('my app', function() {
 
   it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
+    expect(browser.getLocationAbsUrl()).toMatch("/");
   });
 
 
-  describe('view1', function() {
+  describe('index', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/view1');
+      browser.get('index.html');
     });
 
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+    it('should render index view when user navigates to index', function() {
+      expect(element.all(by.css('[ui-view] h1')).first().getText()).
+        toMatch(/Hello World/);
     });
 
   });
 
 
-  describe('view2', function() {
+  describe('about', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/view2');
+      browser.get('index.html#/about');
     });
 
 
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
+    it('should render about view when user navigates to about', function() {
+      expect(element.all(by.css('[ui-view] h1')).first().getText()).
+        toMatch(/About Us/);
     });
 
   });
