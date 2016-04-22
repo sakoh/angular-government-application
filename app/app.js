@@ -5,15 +5,54 @@ angular.module('myApp', [
   'ui.router'
 ]).
 config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
   $stateProvider.state('home', {
     url: '/',
-    templateUrl: 'templates/index.html',
+    views:{
+      "main": {
+        templateUrl: 'templates/index.html'
+      }
+    },
     controller: function($scope){
 
     }
   }).state('about', {
     url: '/about',
-    templateUrl: 'templates/about.html',
+    views:{
+      "main": {
+        templateUrl: 'templates/about.html'
+      }
+    },
+    controller: function($scope){
+
+    }
+  }).state('registration', {
+    url: '/registration',
+    views:{
+      "main": {
+        templateUrl: 'templates/registration/index.html'
+      }
+    },
+    controller: function($scope){
+
+    }
+  }).state('registration.step-1', {
+    url: '/step-1',
+    views:{
+      "registrationForm": {
+        templateUrl: 'templates/registration/step-1.html'
+      }
+    },
+    controller: function($scope){
+
+    }
+  }).state('registration.step-2', {
+    url: '/step-2',
+    views:{
+      "registrationForm": {
+        templateUrl: 'templates/registration/step-2.html'
+      }
+    },
     controller: function($scope){
 
     }

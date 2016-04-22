@@ -39,4 +39,27 @@ describe('my app', function() {
     });
 
   });
+
+  describe('registration', function() {
+
+
+    it('should render a view when user navigates to /registration', function() {
+      browser.get('index.html#/registration');
+      expect(element.all(by.css('[ui-view] h1')).first().getText()).
+        toMatch(/Registration/);
+    });
+
+    it('should render a view when user navigates to /registration/step-1', function() {
+      browser.get('index.html#/registration/step-1');
+      expect(element.all(by.css('[ui-view] p')).first().getText()).
+        toMatch(/Step 1/);
+    });
+
+    it('should render a view when user navigates to /registration/step-2', function() {
+      browser.get('index.html#/registration/step-2');
+      expect(element.all(by.css('[ui-view] p')).first().getText()).
+        toMatch(/Step 2/);
+    });
+
+  });
 });
