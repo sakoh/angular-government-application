@@ -36,6 +36,18 @@ config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRout
     controller: function($scope){
 
     }
+  }).state('registration.step-3', {
+    url: '/step-3',
+    templateUrl: 'templates/registration/step-3.html',
+    controller: function($scope){
+
+    }
+  }).state('registration.step-4', {
+    url: '/step-4',
+    templateUrl: 'templates/registration/step-4.html',
+    controller: function($scope){
+
+    }
   });
 
    $urlRouterProvider.otherwise("/");

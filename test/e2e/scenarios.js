@@ -47,6 +47,7 @@ describe('my app', function() {
       browser.get('index.html#/registration');
       expect(element.all(by.css('[ui-view] h1')).first().getText()).
         toMatch(/Registration/);
+
     });
 
     it('should render a view when user navigates to /registration/step-1', function() {
@@ -59,6 +60,18 @@ describe('my app', function() {
       browser.get('index.html#/registration/step-2');
       expect(element.all(by.css('[ui-view] p')).first().getText()).
         toMatch(/Step 2/);
+    });
+
+    it('should render a view when user navigates to /registration/step-3', function() {
+      browser.get('index.html#/registration/step-3');
+      expect(element.all(by.css('[ui-view] p')).first().getText()).
+        toMatch(/Step 3/);
+    });
+
+    it('should render a view when user navigates to /registration/step-4', function() {
+      browser.get('index.html#/registration/step-4');
+      expect(element.all(by.css('[ui-view] p')).first().getText()).
+        toMatch(/Step 4/);
     });
 
   });
