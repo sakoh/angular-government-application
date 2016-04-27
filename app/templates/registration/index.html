@@ -1,9 +1,20 @@
 <h1>Registration</h1>
-
-<ul active-nav="active" class="nav nav-pills">
-  <li role="presentation"><a ui-sref="registration.step-1">Step 1</a></li>
-  <li role="presentation"><a ui-sref="registration.step-2">Step 2</a></li>
-  <li role="presentation"><a ui-sref="registration.step-3">Step 3</a></li>
-  <li role="presentation"><a ui-sref="registration.step-4">Step 4</a></li>
-</ul>
+<div navigation template-url="partials/registration-menu.html" links="[
+    {
+      state: 'registration.step-1',
+      title: 'Step 1',
+    },
+    {
+      state: 'registration.step-2',
+      title: 'Step 2',
+    },
+    {
+      state: 'registration.step-3',
+      title: 'Step 3',
+    },
+    {
+      state: 'registration.step-4',
+      title: 'Step 4',
+    }
+]"></div>
 <div ui-view></div>
