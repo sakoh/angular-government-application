@@ -56,10 +56,16 @@ describe('my app', function() {
         toEqual(8);
     });
 
-    it('should render a view when user navigates to /registration/step-2', function() {
+    it('should render inputs when user navigates to /registration/step-2', function() {
       browser.get('index.html#/registration/step-2');
-      expect(element.all(by.css('[ui-view] fieldset')).count()).
+      expect(element.all(by.css('[ui-view] input')).count()).
         toEqual(3);
+    });
+
+    it('should render select options when user navigates to /registration/step-2', function() {
+      browser.get('index.html#/registration/step-2');
+      expect(element.all(by.css('[ui-view] select')).count()).
+        toEqual(5);
     });
 
     it('should render a view when user navigates to /registration/step-3', function() {
