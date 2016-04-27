@@ -46,34 +46,22 @@ describe('my app', function() {
 
     });
 
-    it('should render a view when user navigates to /registration/step-1', function() {
-      browser.get('#/registration/step-1');
+    it('should render a view when user navigates to /registration/property', function() {
+      browser.get('#/registration/property');
       expect(element.all(by.css('[ui-view] fieldset')).count()).
         toEqual(8);
     });
 
-    it('should render inputs when user navigates to /registration/step-2', function() {
-      browser.get('#/registration/step-2');
+    it('should render inputs when user navigates to /registration/transferors-sellers', function() {
+      browser.get('#/registration/transferors-sellers');
       expect(element.all(by.css('[ui-view] input')).count()).
         toEqual(3);
     });
 
-    it('should render select options when user navigates to /registration/step-2', function() {
-      browser.get('#/registration/step-2');
+    it('should render select options when user navigates to /registration/transferors-sellers', function() {
+      browser.get('#/registration/transferors-sellers');
       expect(element.all(by.css('[ui-view] select')).count()).
         toEqual(5);
-    });
-
-    it('should render a view when user navigates to /registration/step-3', function() {
-      browser.get('#/registration/step-3');
-      expect(element.all(by.css('[ui-view] p')).first().getText()).
-        toMatch(/Step 3/);
-    });
-
-    it('should render a view when user navigates to /registration/step-4', function() {
-      browser.get('#/registration/step-4');
-      expect(element.all(by.css('[ui-view] p')).first().getText()).
-        toMatch(/Step 4/);
     });
 
   });

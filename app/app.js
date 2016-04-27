@@ -24,33 +24,21 @@ config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRout
     url: '/registration',
     templateUrl: 'templates/registration/index.html',
     controller: 'RegistrationCtrl'
-  }).state('registration.step-1', {
-    url: '/step-1',
-    templateUrl: 'templates/registration/step-1.html',
+  }).state('registration.property', {
+    url: '/property',
+    templateUrl: 'templates/registration/property.html',
     controller: function($scope, $http){
       $http.get('./content.json').success(function(data){
         $scope.data = data['A'];
       });
     }
-  }).state('registration.step-2', {
-    url: '/step-2',
-    templateUrl: 'templates/registration/step-2.html',
+  }).state('registration.transferors-sellers', {
+    url: '/transferors-sellers',
+    templateUrl: 'templates/registration/transferors-sellers.html',
     controller: function($scope, $http){
       $http.get('./content.json').success(function(data){
         $scope.data = data['B'];
       });
-    }
-  }).state('registration.step-3', {
-    url: '/step-3',
-    templateUrl: 'templates/registration/step-3.html',
-    controller: function($scope){
-
-    }
-  }).state('registration.step-4', {
-    url: '/step-4',
-    templateUrl: 'templates/registration/step-4.html',
-    controller: function($scope){
-
     }
   });
 
