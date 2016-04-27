@@ -2,14 +2,13 @@
 <div ng-repeat="fieldset in data">
   <fieldset ng-if="fieldset.type=='input'" class="form-group">
     <label for="{{fieldset.title}}">{{fieldset.title}}</label>
-    <input type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="Enter email">
-    <small class="text-muted">{{fieldset.title}}</small>
+    <input type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="{{fieldset.title}}">
   </fieldset>
   <fieldset ng-if="fieldset.type=='multi-choice'" class="form-group">
     <label for="{{fieldset.title}}">{{fieldset.title}}</label>
     <select class="form-control" id="{{fieldset.title}}">
-     <option ng-repeat="option in fieldset.options">{{option}}</option>
+     <option select value="">Choose One</option>
+     <option value="{{option}}" ng-repeat="option in fieldset.options">{{option}}</option>
     </select>
   </fieldset>
 </div>
-<a ui-sref="registration.step-2" class="btn btn-primary">Next</a>

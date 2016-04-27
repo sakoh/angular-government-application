@@ -1,4 +1,5 @@
 angular.module('govApp.RegistrationCtrl',[])
-.controller('RegistrationCtrl', ['$scope', function($scope){
+.controller('RegistrationCtrl', ['$scope','$location', function($scope, $location){
   $scope.object = {};
+  $scope.registrationIndex = $location.path() === '/registration';
 }]);

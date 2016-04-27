@@ -46,6 +46,12 @@ describe('my app', function() {
 
     });
 
+    it('should render a property as the default subview when user navigates to /registration', function() {
+      browser.get('#/registration');
+      expect(element.all(by.css('[ui-view] h3')).first().getText()).
+        toMatch(/Property/);
+    });
+
     it('should render a view when user navigates to /registration/property', function() {
       browser.get('#/registration/property');
       expect(element.all(by.css('[ui-view] fieldset')).count()).
