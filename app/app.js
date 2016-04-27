@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('govApp', [
   'ui.router',
-  'active-link'
+  'govApp.directives.navigation'
 ]).
 config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
