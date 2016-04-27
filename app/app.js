@@ -35,8 +35,10 @@ config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRout
   }).state('registration.step-2', {
     url: '/step-2',
     templateUrl: 'templates/registration/step-2.html',
-    controller: function($scope){
-
+    controller: function($scope, $http){
+      $http.get('./content.json').success(function(data){
+        $scope.data = data['B'];
+      });
     }
   }).state('registration.step-3', {
     url: '/step-3',

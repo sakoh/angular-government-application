@@ -1,1 +1,8 @@
-<p>Step 2</p>
+<div ng-repeat="fieldset in data">
+  <fieldset ng-if="fieldset.type=='input'" class="form-group">
+    <label for="{{fieldset.title}}">{{fieldset.title}}</label>
+    <input type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="Enter email">
+    <small class="text-muted">{{fieldset.title}}</small>
+  </fieldset>
+</div>
+<a ui-sref="registration.step-2" class="btn btn-primary">Next</a>
