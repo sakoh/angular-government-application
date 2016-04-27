@@ -3,7 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('govApp', [
   'ui.router',
-  'govApp.directives.navigation'
+  'govApp.directives.navigation',
+  'govApp.RegistrationCtrl'
 ]).
 config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
