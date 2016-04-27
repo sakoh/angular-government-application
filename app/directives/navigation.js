@@ -7,6 +7,8 @@ angular.module('govApp.directives.navigation',[]).directive('navigation', functi
     replace: true,
     templateUrl: "partials/navigation.html",
     link: function(scope, element, attrs){
+      scope.states = {};
+      scope.states.activeItem = 'home';
       scope.links = [{
         id: 'home',
         title: 'Home'
