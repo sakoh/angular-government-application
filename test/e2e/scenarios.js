@@ -52,8 +52,8 @@ describe('my app', function() {
 
     it('should render a view when user navigates to /registration/step-1', function() {
       browser.get('index.html#/registration/step-1');
-      expect(element.all(by.css('[ui-view] p')).first().getText()).
-        toMatch(/Step 1/);
+      expect(element.all(by.css('[ui-view] fieldset')).count()).
+        toEqual(8);
     });
 
     it('should render a view when user navigates to /registration/step-2', function() {

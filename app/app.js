@@ -23,14 +23,14 @@ config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRout
   }).state('registration', {
     url: '/registration',
     templateUrl: 'templates/registration/index.html',
-    controller: function($scope){
-
-    }
+    controller: 'RegistrationCtrl'
   }).state('registration.step-1', {
     url: '/step-1',
     templateUrl: 'templates/registration/step-1.html',
-    controller: function($scope){
-
+    controller: function($scope, $http){
+      $http.get('./content.json').success(function(data){
+        $scope.data = data['A'];
+      });
     }
   }).state('registration.step-2', {
     url: '/step-2',
