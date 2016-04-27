@@ -1,5 +1,5 @@
 <h1>Registration</h1>
-<div navigation template-url="partials/registration-menu.html" links="[
+<div class="col-md-4" navigation template-url="partials/registration-menu.html" links="[
     {
       state: 'registration.step-1',
       title: 'Step 1',
@@ -17,6 +17,8 @@
       title: 'Step 4',
     }
 ]"></div>
-<form>
-  <div ui-view></div>
-</form>
+<div class="col-md-8">
+  <form>
+    <div ui-view></div>
+  </form>
+</div>

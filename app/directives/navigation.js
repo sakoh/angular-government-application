@@ -5,7 +5,7 @@ angular.module('govApp.directives.navigation',[]).directive('navigation', functi
 		},
     transclude: true,
     restrict: 'EA',
-    replace: true,
+    replace: false,
     templateUrl: function(elem, attrs) {
       return attrs.templateUrl || "partials/navigation.html";
     }
