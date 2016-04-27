@@ -14,7 +14,7 @@ describe('my app', function() {
   describe('index', function() {
 
     beforeEach(function() {
-      browser.get('index.html');
+      browser.get('#/');
     });
 
 
@@ -28,12 +28,8 @@ describe('my app', function() {
 
   describe('about', function() {
 
-    beforeEach(function() {
-      browser.get('index.html#/about');
-    });
-
-
     it('should render about view when user navigates to about', function() {
+      browser.get('#/about');
       expect(element.all(by.css('[ui-view] h1')).first().getText()).
         toMatch(/About Us/);
     });
@@ -44,38 +40,38 @@ describe('my app', function() {
 
 
     it('should render a view when user navigates to /registration', function() {
-      browser.get('index.html#/registration');
+      browser.get('#/registration');
       expect(element.all(by.css('[ui-view] h1')).first().getText()).
         toMatch(/Registration/);
 
     });
 
     it('should render a view when user navigates to /registration/step-1', function() {
-      browser.get('index.html#/registration/step-1');
+      browser.get('#/registration/step-1');
       expect(element.all(by.css('[ui-view] fieldset')).count()).
         toEqual(8);
     });
 
     it('should render inputs when user navigates to /registration/step-2', function() {
-      browser.get('index.html#/registration/step-2');
+      browser.get('#/registration/step-2');
       expect(element.all(by.css('[ui-view] input')).count()).
         toEqual(3);
     });
 
     it('should render select options when user navigates to /registration/step-2', function() {
-      browser.get('index.html#/registration/step-2');
+      browser.get('#/registration/step-2');
       expect(element.all(by.css('[ui-view] select')).count()).
         toEqual(5);
     });
 
     it('should render a view when user navigates to /registration/step-3', function() {
-      browser.get('index.html#/registration/step-3');
+      browser.get('#/registration/step-3');
       expect(element.all(by.css('[ui-view] p')).first().getText()).
         toMatch(/Step 3/);
     });
 
     it('should render a view when user navigates to /registration/step-4', function() {
-      browser.get('index.html#/registration/step-4');
+      browser.get('#/registration/step-4');
       expect(element.all(by.css('[ui-view] p')).first().getText()).
         toMatch(/Step 4/);
     });
