@@ -1,6 +1,6 @@
 <h3>Property</h3>
 <fieldset ng-repeat="fieldset in data" class="form-group">
   <label for="{{fieldset.title}}">{{fieldset.title}}</label>
-  <input type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="{{fieldset.title}}">
+  <input ng-bind=fieldset.model type="{{fieldset.title}}" value="" class="form-control" id="{{fieldset.title}}" placeholder="{{fieldset.title}}">
 </fieldset>
 <a ui-sref="registration.transferors-sellers" class="btn btn-primary">Next</a>

@@ -1,5 +1,5 @@
 <ul class="nav nav-pills nav-stacked">
-  <li ui-sref-active="active" ng-repeat="link in links" ng-if="location.path() != link.url" class="nav-item">
+  <li ui-sref-active="active" ng-repeat="link in links" class="nav-item">
     <a class="nav-link" ui-sref="{{link.state}}">{{link.title}}</a>
   </li>
 </ul>

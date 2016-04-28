@@ -2,7 +2,7 @@
 <div ng-repeat="fieldset in data">
   <fieldset ng-if="fieldset.type=='input'" class="form-group">
     <label for="{{fieldset.title}}">{{fieldset.title}}</label>
-    <input type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="{{fieldset.title}}">
+    <input ng-bind=fieldset.model type="{{fieldset.title}}" class="form-control" id="{{fieldset.title}}" placeholder="{{fieldset.title}}">
   </fieldset>
   <fieldset ng-if="fieldset.type=='multi-choice'" class="form-group">
     <label for="{{fieldset.title}}">{{fieldset.title}}</label>
@@ -12,3 +12,5 @@
     </select>
   </fieldset>
 </div>
+<a ui-sref="registration.property" class="btn btn-primary">Previous</a>
+<a ui-sref="registration.review" class="btn btn-primary">Next</a>

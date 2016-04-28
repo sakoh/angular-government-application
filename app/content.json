@@ -2,56 +2,56 @@
   "A": [
     {
       "title": "assessor's parcel number",
-      "model": "parcel-number"
+      "model": "object.parcel-number"
     },
     {
       "title": "property address",
-      "model": "property-address"
+      "model": "object.property-address"
     },
     {
       "title": "city",
-      "model": "city"
+      "model": "object.city"
     },
     {
       "title": "date of purchase or transfer",
-      "model": "purchase-transfer-date"
+      "model": "object.purchase-transfer-date"
     },
     {
       "title": "recorder's document number",
-      "model": "document-number"
+      "model": "object.document-number"
     },
     {
       "title": "probate number (if applicable)",
-      "model": "probate-number"
+      "model": "object.probate-number"
     },
     {
       "title": "date of death (if applicable)",
-      "model": "death-date"
+      "model": "object.death-date"
     },
     {
       "title": "date of decree of distribution (if applicable)",
-      "model": "distribution-decree-date"
+      "model": "object.distribution-decree-date"
     }
   ],
   "B": [
     {
       "title": "print full name(s) of transferee(s)",
-      "model": "transferee",
+      "model": "object.transferee",
       "type": "input"
     },
     {
       "title": "Family relationship(s) to transferor(s)",
-      "model": "family-relationship",
+      "model": "object.family-relationship",
       "type": "input"
     },
     {
       "title": "If adopted, age at time of adoption",
-      "model": "adoption-age",
+      "model": "object.adoption-age",
       "type": "input"
     },
     {
       "title": "If stepparent/stepchild relationship is involved, was parent still married to or in a registered domestic partnership (registered means registered with the California Secretary of State) with stepparent on the date of purchase or transfer?\n",
-      "model": "stepparent-stepchild-relationship",
+      "model": "object.stepparent-stepchild-relationship",
       "type": "multi-choice",
       "options": [
         "yes",
@@ -60,7 +60,7 @@
     },
     {
       "title": "If no, was the marriage or registered domestic partnership terminated by:",
-      "model": "marriage-termination",
+      "model": "object.marriage-termination",
       "type": "multi-choice",
       "options": [
         "death",
@@ -69,7 +69,7 @@
     },
     {
       "title": "If terminated by death, had the surviving stepparent remarried or entered into a registered domestic partnership as of the date of purchase or transfer?\n",
-      "model": "remarried-or-domestic-relationship",
+      "model": "object.remarried-or-domestic-relationship",
       "type": "multi-choice",
       "options": [
         "yes",
@@ -78,7 +78,7 @@
     },
     {
       "title": "If in-law relationship is involved, was the son-in-law or daughter-in-law still married to or in a registered domestic partnership with the daughter or son on the date of purchase or transfer?\n",
-      "model": "in-law-relationship",
+      "model": "object.in-law-relationship",
       "type": "multi-choice",
       "options": [
         "yes",
@@ -87,7 +87,7 @@
     },
     {
       "title": "If terminated by death, had the surviving son-in-law or daughter-in-law remarried or entered into a registered domestic partnership as of the date of purchase or transfer?\n",
-      "model": "surviving-child-in-law",
+      "model": "object.surviving-child-in-law",
       "type": "multi-choice",
       "options": [
         "yes",
