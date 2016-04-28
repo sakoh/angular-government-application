@@ -40,13 +40,13 @@ config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRout
         $scope.data = data['B'];
       });
     }
-  }).state('registration.review', {
-    url: '/review',
-    templateUrl: 'templates/registration/review.html',
-    controller: function($scope){
-
-    }
   });
+  // .state('registration.review', {
+  //   url: '/review',
+  //   templateUrl: 'templates/registration/review.html',
+  //   controller: function($scope){
+  //   }
+  // });
 
    $urlRouterProvider.otherwise("/");
 }]);
